@@ -2,6 +2,13 @@
 
 本项目遵循 [语义化版本](https://semver.org/lang/zh-CN/)。
 
+## [1.1.2] — 2026-11-20
+
+### 变更
+
+- **仓库迁移到 GitHub**：三个插件包的下载地址改为 `github.com/zmcnet` 的 Releases，
+  不再依赖 CNB。zip 内容未变，SHA256 常量保持原值。
+
 ## [1.1.1]
 
 ### 修复
