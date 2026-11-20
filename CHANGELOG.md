@@ -71,7 +71,7 @@
 
 ### 设计
 
-- **插件包从 CNB release 下载**，不依赖本机有源码目录 —— 所以这个 exe 拷到任何一台
+- **插件包从 GitHub Releases 下载**，不依赖本机有源码目录 —— 所以这个 exe 拷到任何一台
   装了 ZCode 的 Windows 上都能直接跑。
 - **逐个校验 SHA256**：清单（版本 / URL / SHA256）写死在 `src/Program.cs` 的 `PLUGINS` 表里。
   下载后哈希对不上就中止，不拿未知内容去改用户的 `app.asar`。

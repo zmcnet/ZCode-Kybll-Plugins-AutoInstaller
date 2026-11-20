@@ -1,18 +1,18 @@
 # ZCode-Kybll-Plugins-AutoInstaller
 
-一个 exe，装好三个 ZCode 插件。**拷到任何一台装了 ZCode 的 Windows 上，双击就行** —— 插件包从 CNB release 现下现装，不依赖本机有源码。
+一个 exe，装好三个 ZCode 插件。**拷到任何一台装了 ZCode 的 Windows 上，双击就行** —— 插件包从 GitHub Releases 现下现装，不依赖本机有源码。
 
 | 插件 | 作用 | 形态 |
 | --- | --- | --- |
-| [Zcode-Status-TypeBar](https://cnb.cool/kybll/Zcode-Status-TypeBar) | 输入框下方的 token 用量状态条（速度 / 首字 / 缓存 / 上下文 / 会话累计 / 今日合计） | 改 `app.asar` |
-| [Zcode-Status-Daily-Use](https://cnb.cool/kybll/Zcode-Status-Daily-Use) | 设置 → 用量 里的「今日用量」卡片（当天概览 + 24 小时分布 + 按模型/按会话） | 改 `app.asar` |
-| [ZCode-Search-Aggregation](https://cnb.cool/kybll/ZCode-Search-Aggregation) | 多引擎并行搜索（百度 / 必应 / 360 / 搜狗 / GitHub / Google / Yahoo / DuckDuckGo） | 原生插件 |
+| [Zcode-Status-TypeBar](https://github.com/zmcnet/Zcode-Status-TypeBar) | 输入框下方的 token 用量状态条（速度 / 首字 / 缓存 / 上下文 / 会话累计 / 今日合计） | 改 `app.asar` |
+| [Zcode-Status-Daily-Use](https://github.com/zmcnet/Zcode-Status-Daily-Use) | 设置 → 用量 里的「今日用量」卡片（当天概览 + 24 小时分布 + 按模型/按会话） | 改 `app.asar` |
+| [ZCode-Search-Aggregation](https://github.com/zmcnet/ZCode-Search-Aggregation) | 多引擎并行搜索（百度 / 必应 / 360 / 搜狗 / GitHub / Google / Yahoo / DuckDuckGo） | 原生插件 |
 
 ---
 
 ## 用法
 
-1. 从 [Releases](https://cnb.cool/kybll/ZCode-Kybll-Plugins-AutoInstaller/-/releases) 下载 `Install-ZCode-Plugins.exe`。
+1. 从 [Releases](https://github.com/zmcnet/ZCode-Kybll-Plugins-AutoInstaller/releases) 下载 `Install-ZCode-Plugins.exe`。
 2. 双击。
 3. 看到提示后**完全退出 ZCode**：
    - 关掉所有 ZCode 窗口；
@@ -35,7 +35,7 @@
 本程序负责：
 
 1. 找 Python 与 ZCode；
-2. 从 CNB release 下载三个 zip，**逐个校验 SHA256**，对不上就中止（不拿未知内容去改 `app.asar`）；
+2. 从 GitHub Releases 下载三个 zip，**逐个校验 SHA256**，对不上就中止（不拿未知内容去改 `app.asar`）；
 3. 解压（有 zip slip 防护：条目路径越出目标目录直接拒绝）；
 4. 等 ZCode 退出（轮询进程，上限 30 分钟）；
 5. 依次调用三个插件的安装器；

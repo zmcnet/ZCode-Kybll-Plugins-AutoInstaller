@@ -2,7 +2,7 @@
 *.exe
 dist/
 build/
-# 打包进来做离线测试的插件包（体积大，且可从 CNB release 下载）
+# 打包进来做离线测试的插件包（体积大，且可从 GitHub Releases 下载）
 *.zip
 # Python 缓存
 __pycache__/

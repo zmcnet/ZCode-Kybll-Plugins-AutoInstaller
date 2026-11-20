@@ -5,7 +5,7 @@
  *   2. Zcode-Status-Daily-Use    —— 设置页「今日用量」区块（改 app.asar）
  *   3. ZCode-Search-Aggregation  —— 多引擎并行搜索（原生插件，走 zcode CLI）
  *
- * 与本地源码版的关键差别：**插件包从 CNB release 下载**，不依赖本机存在
+ * 与本地源码版的关键差别：**插件包从 GitHub Releases 下载**，不依赖本机存在
  * 源码目录。所以这个 exe 拷到任何一台装了 ZCode 的 Windows 上都能直接跑。
  *
  * 下载清单写死在 PLUGINS 里（含 SHA256）：下载后必须校验哈希，对不上就中止，
@@ -37,7 +37,7 @@ using System.Threading;
 internal static class Program
 {
     /* 插件清单。版本、URL、SHA256 三者要一起改；换版本时重新算哈希。
-     * 仓库：https://cnb.cool/kybll */
+     * 仓库：https://github.com/zmcnet */
     private class PluginSpec
     {
         public string Name;        // 目录名，也是 release 里的顶层目录名
@@ -52,21 +52,21 @@ internal static class Program
         new PluginSpec {
             Name = "Zcode-Status-TypeBar",
             Version = "1.1.1",
-            Url = "https://cnb.cool/kybll/Zcode-Status-TypeBar/-/releases/download/v1.1.1/Zcode-Status-TypeBar-v1.1.1.zip",
+            Url = "https://github.com/zmcnet/Zcode-Status-TypeBar/releases/download/v1.1.1/Zcode-Status-TypeBar-v1.1.1.zip",
             Sha256 = "ef2447d58bba49c39f116e3d7a3ac1a143c3b3c8ce00d3133c1cdd23ddddb8a3",
             IsAsar = true,
         },
         new PluginSpec {
             Name = "Zcode-Status-Daily-Use",
             Version = "1.1.0",
-            Url = "https://cnb.cool/kybll/Zcode-Status-Daily-Use/-/releases/download/v1.1.0/Zcode-Status-Daily-Use-v1.1.0.zip",
+            Url = "https://github.com/zmcnet/Zcode-Status-Daily-Use/releases/download/v1.1.0/Zcode-Status-Daily-Use-v1.1.0.zip",
             Sha256 = "c4bb6288a41065cb000e841d732384eb2fd0f6b0ccf3ba6efe8a6e844f20dee2",
             IsAsar = true,
         },
         new PluginSpec {
             Name = "ZCode-Search-Aggregation",
             Version = "1.0.0",
-            Url = "https://cnb.cool/kybll/ZCode-Search-Aggregation/-/releases/download/v1.0.0/ZCode-Search-Aggregation-v1.0.0.zip",
+            Url = "https://github.com/zmcnet/ZCode-Search-Aggregation/releases/download/v1.0.0/ZCode-Search-Aggregation-v1.0.0.zip",
             Sha256 = "7b6e951a2821b193db6dfce94e7fe694a08b21fd08a2958e4ae85b3ce360b5c5",
             IsAsar = false,
         },
